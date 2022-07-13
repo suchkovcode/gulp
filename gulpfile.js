@@ -85,4 +85,5 @@ function watchFiles() {
 }
 
 /* Tasks */
-exports.default = series(cleanBuild, html, htmlCommon, styles, imgToBuild, fontsToBuild, libsToBuild, jsToBuild, sitemap, watchFiles);
+exports.build = series(cleanBuild, html, htmlCommon, styles, imgToBuild, fontsToBuild, libsToBuild, jsToBuild, sitemap, watchFiles);
+exports.zip = ;
