@@ -77,7 +77,12 @@ const path = {
    zip: {
       src: "./public/**/*",
       pub: "./",
-   }
+   },
+   admin: {
+      src: "./src/admin/**/*",
+      dev: "./build/admin/",
+      pub: "./public/admin/",
+   },
 }
 
 module.exports = path;

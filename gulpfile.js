@@ -22,7 +22,8 @@ exports.default =
    $.task.styles,
    $.task.transfer.js,
    $.task.transfer.vendorJs,
-   $.task.transfer.vendorCSS);
+   $.task.transfer.vendorCSS,
+   $.task.transfer.admin,);
 
 
 /* Запускает сборку с запуском сервера */
@@ -38,6 +39,7 @@ exports.dev =
    $.task.transfer.js,
    $.task.transfer.vendorJs,
    $.task.transfer.vendorCSS,
+   $.task.transfer.admin,
    $.task.server);
    
 /* Запускает продвкшен сборку */
@@ -54,6 +56,7 @@ exports.pub =
    $.task.pub.transfer.js,
    $.task.pub.transfer.vendorJs,
    $.task.pub.transfer.vendorCSS,
+   $.task.transfer.admin,
    $.task.pub.sitemap,
    $.task.pub.server);
 
