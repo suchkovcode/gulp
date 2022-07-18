@@ -1,27 +1,24 @@
 const styles = () => {
-   return (
-      $.gulp.src("./src/scss/**/*.scss")
-         .pipe(
-            $.app.plumber({
-               errorHandler: $.app.notify.onError((error) => ({
-                  title: "CSS",
-                  message: error.message,
-               })),
-            })
-         )
-         .pipe($.app.sourcemaps.init())
-         .pipe($.sass())
-         .pipe($.app.autoprefixer())
-         .pipe($.app.shorthand())
-         .pipe($.app.groupCssMediaQueries())
-         // .pipe($.app.webpcss({}))
-         .pipe($.app.size({ title: "Размер до сжатия:", showFiles: true }))
-         .pipe($.app.cssmin())
-         .pipe($.app.rename({ extname: ".min.css" }))
-         .pipe($.app.size({ title: "Размер после сжатия:", showFiles: true }))
-         .pipe($.app.sourcemaps.write("map/"))
-         .pipe($.gulp.dest("./build/css/"))
-         .pipe($.browserSync.stream())
-   );
+   return $.gulp
+      .src($.path.css.src)
+      .pipe($.app.sourcemaps.init()).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+       }))
+      .pipe($.sass()).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+      }))
+      .pipe($.app.autoprefixer()).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+      }))
+      .pipe($.app.rename({ extname: ".min.css" }))
+      .pipe($.app.sourcemaps.write("map/")).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+       }))
+      .pipe($.gulp.dest($.path.css.dev))
+      .pipe($.browserSync.stream());
 };
 module.exports = styles;

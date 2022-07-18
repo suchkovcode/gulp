@@ -1,7 +1,6 @@
 const sitemapGen = () => {
-   return $.gulp.src("./build/**/*.html")
-      .pipe(
-         $.app.sitemap({
+   return $.gulp.src($.path.sitemap.src)
+      .pipe($.app.sitemap({
             siteUrl: "http://www.amazon.com",
             fileName: "sitemap.xml",
             changefreq: "weekly",
@@ -12,8 +11,10 @@ const sitemapGen = () => {
             noindex: false,
             images: true,
          })
-      )
-      .pipe($.gulp.dest("./build/"));
+      ).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+      }))
+      .pipe($.gulp.dest($.path.sitemap.pub));
 };
-
 module.exports = sitemapGen;

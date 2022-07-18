@@ -1,13 +1,13 @@
 const server = () => {
-   $.browserSync.init({ server: { baseDir: "./build" } });
-   $.gulp.watch("./src/*.html",          $.task.html);
-   $.gulp.watch("./src/scss/**/*.scss",  $.task.styles);
-   $.gulp.watch("./src/html/**/*.html",  $.task.html);
-   $.gulp.watch("./src/img/**/*",        $.gulp.series($.task.clean.img, $.task.transfer.img));
-   $.gulp.watch("./src/img/webp/**/*",   $.gulp.series($.task.clean.webp, $.task.transfer.webp));
-   $.gulp.watch("./src/video/**/*",      $.gulp.series($.task.clean.video, $.task.transfer.video));
-   $.gulp.watch("./src/fonts/**/*",      $.gulp.series($.task.clean.fonts, $.task.transfer.fonts));
-   $.gulp.watch("./src/js/**/*",         $.gulp.series($.task.clean.js, $.task.transfer.js));
+   $.browserSync.init({server: "./build", port: 3000, notify: false});
+   $.gulp.watch($.path.html.watch,       $.task.html);
+   $.gulp.watch($.path.html.src.comp,    $.task.html);
+   $.gulp.watch($.path.css.watch,        $.task.styles);
+   $.gulp.watch($.path.js.watch,         $.gulp.series($.task.clean.js, $.task.transfer.js));
+   $.gulp.watch($.path.img.watch,        $.gulp.series($.task.clean.img, $.task.transfer.img));
+   $.gulp.watch($.path.webp.watch,       $.gulp.series($.task.clean.webp, $.task.transfer.webp));
+   $.gulp.watch($.path.fonts.watch,      $.gulp.series($.task.clean.fonts, $.task.transfer.fonts));
+   $.gulp.watch($.path.video.watch,      $.gulp.series($.task.clean.video, $.task.transfer.video));
    $.gulp.watch("./src/libs/**/*",       $.gulp.series($.task.clean.vendor, $.task.transfer.vendorJs, $.task.transfer.vendorCSS));
 };
 

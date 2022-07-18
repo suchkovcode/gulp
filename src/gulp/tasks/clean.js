@@ -1,9 +1,9 @@
 const cleanBuild = () => {
    return $.gulp.src("build/*")
-      .pipe($.app.clean());
+      .pipe($.app.clean())
 };
 const cleanImg = () => {
-   return $.gulp.src("img/*")
+   return $.gulp.src("build/img/*")
       .pipe($.app.clean());
 };
 const cleanFonts = () => {
@@ -12,10 +12,6 @@ const cleanFonts = () => {
 };
 const cleanJs = () => {
    return $.gulp.src("build/js/")
-   .pipe($.app.clean());
-};
-const cleanSitemap = () => {
-   return $.gulp.src("build/sitemap.xml")
    .pipe($.app.clean());
 };
 const cleanVendor = () => {
@@ -40,5 +36,4 @@ module.exports = {
    js: cleanJs,
    vendor: cleanVendor,
    video: cleanVideo,
-   sitemap: cleanSitemap,
 };
