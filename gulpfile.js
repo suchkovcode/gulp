@@ -56,7 +56,7 @@ exports.pub =
    $.task.pub.transfer.js,
    $.task.pub.transfer.vendorJs,
    $.task.pub.transfer.vendorCSS,
-   $.task.transfer.admin,
+   $.task.pub.transfer.admin,
    $.task.pub.sitemap,
    $.task.pub.server);
 
