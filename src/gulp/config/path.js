@@ -6,7 +6,10 @@ const path = {
       },
       dev: "./build/",
       pub: "./public/",
-      watch: "./src/html/*.html",
+      watch: {
+         page: "./src/html/page/*.html",
+         comp: "./src/html/components/*.html",
+      }
    },
    css: {
       src: "./src/scss/**/*.{scss,sass}",

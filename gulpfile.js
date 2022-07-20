@@ -61,3 +61,4 @@ exports.pub =
    $.task.pub.server);
 
 exports.zip = $.task.pub.zip;
+exports.app = $.task.html;
