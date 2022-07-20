@@ -1,7 +1,7 @@
 {
-   "name": "english-bro",
+   "name": "example",
    "version": "1.0.0",
-   "description": "Авторская онлайн-школа разговорного английского для учебы, работы и путешествий",
+   "description": "example",
    "main": "gulpfile.js",
    "type": "commonjs",
    "scripts": {
