@@ -1,8 +1,15 @@
 const path = {
+   admin: {
+      src: "./src/admin/**/*",
+      dev: "./build/admin/",
+      pub: "./public/admin/",
+      wp: "./public/",
+   },
    html: {
       src: {
-         page: "./src/html/page/*.html",
+         page: ["./src/html/page/*.html", "!./src/html/page/cookie.html", "!./src/html/page/privacy.html", "!./src/html/page/oferta.html"],
          comp: "./src/html/components/*.html",
+         wp: "./public/wp-content/themes/blank/",
       },
       dev: "./build/",
       pub: "./public/",
@@ -15,6 +22,7 @@ const path = {
       src: "./src/scss/**/*.{scss,sass}",
       dev: "./build/css/",
       pub: "./public/css/",
+      wp: "./public/wp-content/themes/blank/css/",
       watch: "./src/scss/**/*.{scss,sass}",
    },
    js: {
@@ -27,33 +35,32 @@ const path = {
       src: "./src/img/**/*",
       dev: "./build/img/",
       pub: "./public/img/",
+      wp: "./public/wp-content/themes/blank/img/",
       watch: "./src/img/**/*",
    },
    webp: {
       src: {
          dev: "./build/img/png/*.png",
          pub: "./public/img/png/*.png",
+         wp: "./public/wp-content/themes/blank/img/png/*.png",
       },
-      dev: "./build/img/webp",
-      pub: "./public/img/webp",
+      dev: "./build/img/webp/",
+      pub: "./public/img/webp/",
+      wp: "./public/wp-content/themes/blank/img/webp",
       watch: "./build/img/png/*.png",
    },
    fonts: {
       src: "./src/fonts/**/*",
       dev: "./build/fonts/",
       pub: "./public/fonts/",
+      wp: "./public/wp-content/themes/blank/fonts/",
       watch: "./src/fonts/**/*",
    },
    video: {
       src: "./src/video/**/*",
       dev: "./build/video/",
       pub: "./public/video/",
-      watch: "./src/video/**/*",
-   },
-   video: {
-      src: "./src/video/*",
-      dev: "./build/video/",
-      pub: "./public/video/",
+      wp: "./public/wp-content/themes/blank/video/",
       watch: "./src/video/**/*",
    },
    vendorCSS: {
@@ -80,11 +87,6 @@ const path = {
    zip: {
       src: "./public/**/*",
       pub: "./",
-   },
-   admin: {
-      src: "./src/admin/**/*",
-      dev: "./build/admin/",
-      pub: "./public/admin/",
    },
 }
 

@@ -1,13 +1,14 @@
 {
-   "name": "example",
+   "name": "english-bro",
    "version": "1.0.0",
-   "description": "example",
+   "description": "Авторская онлайн-школа разговорного английского для учебы, работы и путешествий",
    "main": "gulpfile.js",
    "type": "commonjs",
    "scripts": {
       "start": "gulp dev",
       "build": "gulp",
       "public": "gulp pub",
+      "wp": "gulp wp",
       "zip": "gulp zip"
    },
    "browserslist": [

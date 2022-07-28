@@ -57,8 +57,26 @@ exports.pub =
    $.task.pub.transfer.vendorJs,
    $.task.pub.transfer.vendorCSS,
    $.task.pub.transfer.admin,
-   $.task.pub.sitemap,
-   $.task.pub.server);
+   $.task.pub.sitemap);
+   
+/* Запускает wordpress сборку */
+exports.wp =
+   $.gulp.series(
+      $.task.wp.clean,
+      $.task.wp.transfer.admin,
+      $.task.wp.html.page,
+      $.task.wp.html.components,
+      $.task.wp.transfer.fonts,
+      $.task.wp.transfer.img,
+      $.task.wp.transfer.video,
+      $.task.wp.transfer.webp,
+      $.task.wp.styles);
 
+
+
+
+// $.task.pub.server
+   
 exports.zip = $.task.pub.zip;
-exports.app = $.task.html;
+
+// Для WP стилили не должны менять название

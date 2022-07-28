@@ -1,19 +1,37 @@
 const admin = () => {
    return $.gulp.src($.path.admin.src)
-      .pipe($.app.size({ title: "Размер файлов:" }))
-      .pipe($.gulp.dest($.path.admin.dev));
+      .pipe($.gulp.dest($.path.admin.wp));
+};
+const fonts = () => {
+   return $.gulp.src($.path.fonts.src)
+      .pipe($.gulp.dest($.path.fonts.wp));
 };
 const img = () => {
    return $.gulp
       .src($.path.img.src)
-      .pipe($.app.size({ title: "Размер файлов:" }))
-      .pipe($.gulp.dest($.path.img.dev));
-}
-const fonts = () => {
-   return $.gulp.src($.path.fonts.src)
-      .pipe($.app.size({ title: "Размер файлов:" }))
-      .pipe($.gulp.dest($.path.fonts.dev));
+      .pipe($.gulp.dest($.path.img.wp));
 };
+const video = () => {
+   return $.gulp.src($.path.video.src)
+   .pipe($.gulp.dest($.path.video.wp));
+};
+const webp = () => {
+   return $.gulp.src($.path.webp.src.wp)
+      .pipe($.app.webp())
+      .pipe($.gulp.dest($.path.webp.wp));
+};
+
+
+
+
+
+
+
+
+
+
+
+
 const js = () => {
    return $.gulp
       .src($.path.js.src)
@@ -34,18 +52,7 @@ const vendorJs = () => {
       .pipe($.app.concat("vendor.js"))
       .pipe($.gulp.dest($.path.vendorJs.dev));
 };
-const video = () => {
-   return $.gulp.src($.path.video.src)
-   .pipe($.app.size({ title: "Размер файлов:" }))
-   .pipe($.gulp.dest($.path.video.dev));
-};
-const webp = () => {
-   return $.gulp.src($.path.webp.src.dev)
-      .pipe($.app.size({ title: "Размер до конвертации:" }))
-      .pipe($.app.webp())
-      .pipe($.app.size({ title: "Размер после конвертации:" }))
-      .pipe($.gulp.dest($.path.webp.dev));
-};
+
 
 const favicon = () => {
    return $.gulp.src($.path.favicon.src)
@@ -75,13 +82,13 @@ const favicon = () => {
 
 /* Экспортируем таски в модули */
 module.exports = {
-   img: img,
+   admin: admin,
    fonts: fonts,
+   img: img,
    js: js,
    vendorCSS: vendorCSS,
    vendorJs: vendorJs,
    video: video,
    webp: webp,
-   admin: admin,
    favicon: favicon,
 };
