@@ -4,11 +4,11 @@ const server = () => {
    $.gulp.watch($.path.html.watch.comp,       $.task.html);
    $.gulp.watch($.path.html.watch.comp,       $.task.htmlInclude);
    $.gulp.watch($.path.css.watch,             $.task.styles);
-   $.gulp.watch($.path.js.watch,              $.gulp.series($.task.clean.js, $.task.transfer.js));
    $.gulp.watch($.path.img.watch,             $.gulp.series($.task.clean.img, $.task.transfer.img, $.task.transfer.webp));
    $.gulp.watch($.path.fonts.watch,           $.gulp.series($.task.clean.fonts, $.task.transfer.fonts));
    $.gulp.watch($.path.video.watch,           $.gulp.series($.task.clean.video, $.task.transfer.video));
-   $.gulp.watch("./src/libs/**/*",            $.gulp.series($.task.clean.vendor, $.task.transfer.vendorJs, $.task.transfer.vendorCSS));
+   $.gulp.watch($.path.js.watch,              $.gulp.series($.task.clean.js, $.task.transfer.js, $.task.transfer.vendorJs));
+   $.gulp.watch("./src/libs/**/*",            $.gulp.series($.task.clean.js, $.task.transfer.js, $.task.transfer.vendorJs, $.task.transfer.vendorCSS));
 };
 
 module.exports = server;

@@ -41,5 +41,8 @@
       "gulp-zip": "^5.1.0",
       "require-dir": "^1.2.0",
       "sass": "^1.53.0"
+   },
+   "dependencies": {
+      "bootstrap": "^5.2.0"
    }
 }
