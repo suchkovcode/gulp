@@ -18,6 +18,12 @@ const styles = () => {
          message: "Error: <%= error.message %>",
          title: "Error running something"
       }))
+   //    .pipe($.app.purgecss({
+   //       content: ['./public/*.html', './public/js/script.js'],
+   //       fontFace: false,
+   //       keyframes: true,
+   //       variables: true,
+   //   }))
       .pipe($.app.csso({ debug: false})).on("error", $.app.notify.onError({
          message: "Error: <%= error.message %>",
          title: "Error running something"
