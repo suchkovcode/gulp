@@ -2,10 +2,10 @@ const img = () => {
    return $.gulp
       .src($.path.img.src)
       .pipe($.app.size({ title: "Размер до сжатия:" }))
-      .pipe($.app.imagemin({ verbose: true })).on("error", $.app.notify.onError({
-         message: "Error: <%= error.message %>",
-         title: "Error running something"
-      }))
+      // .pipe($.app.imagemin({ verbose: true })).on("error", $.app.notify.onError({
+      //    message: "Error: <%= error.message %>",
+      //    title: "Error running something"
+      // }))
       .pipe($.app.size({ title: "Размер после сжатия:" }))
       .pipe($.gulp.dest($.path.img.pub));
 }
@@ -35,6 +35,7 @@ const vendorCSS = () => {
 const vendorJs = () => {
    return $.gulp.src($.path.vendorJs.src)
       .pipe($.app.size({ title: "Размер файлов:" }))
+      .pipe($.app.jsmin())
       .pipe($.app.concat("vendor.js"))
       .pipe($.app.rename({ extname: ".min.js" }))
       .pipe($.gulp.dest($.path.vendorJs.pub));

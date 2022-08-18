@@ -18,6 +18,7 @@ const js = () => {
    return $.gulp
       .src($.path.js.src)
       .pipe($.app.concat("script.js"))
+      .pipe($.app.rename({ extname: ".min.js" }))
       .pipe($.app.size({ title: "Размер файла:" }))
       .pipe($.gulp.dest($.path.js.dev));
 };
@@ -32,6 +33,7 @@ const vendorJs = () => {
    return $.gulp.src($.path.vendorJs.src)
       .pipe($.app.size({ title: "Размер файлов:" }))
       .pipe($.app.concat("vendor.js"))
+      .pipe($.app.rename({ extname: ".min.js" }))
       .pipe($.gulp.dest($.path.vendorJs.dev));
 };
 const video = () => {
