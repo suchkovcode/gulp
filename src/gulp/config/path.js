@@ -6,7 +6,7 @@ const path = {
    },
    html: {
       src: {
-         page: ["./src/html/page/*.html", "!./src/html/page/cookie.html", "!./src/html/page/privacy.html", "!./src/html/page/oferta.html"],
+         page: ["./src/html/page/*.html"],
          comp: "./src/html/components/*.html",
       },
       dev: "./build/",
@@ -23,7 +23,7 @@ const path = {
       watch: "./src/scss/**/*.{scss,sass}",
    },
    js: {
-      src: ["./src/js/components/burger.js", "./src/js/components/animate.js"],
+      src: "./src/js/*.js",
       dev: "./build/js/",
       pub: "./public/js/",
       watch: "./src/js/**/*",
@@ -62,7 +62,7 @@ const path = {
       watch: "./src/libs/**/*.css",
    },
    vendorJs: {
-      src: "./src/libs/**/*.js",
+      src: ["./src/libs/**/*.js"],
       dev: "./build/js/",
       pub: "./public/js/",
       watch: "./src/libs/**/*.js",
