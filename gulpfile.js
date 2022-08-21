@@ -1,4 +1,3 @@
-'use strict';
 const requireDir = require("require-dir");
 global.$ = {
    gulp:           require("gulp"),

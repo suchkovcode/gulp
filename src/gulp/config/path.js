@@ -67,11 +67,6 @@ const path = {
       pub: "./public/js/",
       watch: "./src/libs/**/*.js",
    },
-   favicon: {
-      src: "./src/img/png/favicon.png",
-      dev: "./build/img/favicon/",
-      pub: "./public/img/favicon/",
-   },
    sitemap: {
       src: "./public/**/*.html",
       pub: "./public/",
