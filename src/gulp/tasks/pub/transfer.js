@@ -57,31 +57,6 @@ const admin = () => {
       .pipe($.app.size({ title: "Размер файлов:" }))
       .pipe($.gulp.dest($.path.admin.pub));
 };
-const favicon = () => {
-   return $.gulp.src($.path.favicon.src)
-   .pipe($.app.favicons({
-         appName: "My App",
-         appShortName: "App",
-         appDescription: "This is my application",
-         developerName: "Hayden Bleasel",
-         developerURL: "http://haydenbleasel.com/",
-         background: "#fff",
-         path: "/img/favicon/",
-         url: "http://haydenbleasel.com/",
-         display: "standalone",
-         orientation: "portrait",
-         scope: "/",
-         start_url: "/",
-         version: 1.0,
-         logging: false,
-         html: "index.html",
-         pipeHTML: true,
-         replace: true,
-      })
-   )
-   .pipe($.app.size({ title: "Размер файла:" }))
-   .pipe($.gulp.dest($.path.favicon.pub));
-};
 
 /* Экспортируем таски в модули */
 module.exports = {
@@ -93,7 +68,6 @@ module.exports = {
    video: video,
    webp: webp,
    admin: admin,
-   favicon: favicon,
 };
 
 // Добавить сжатие js

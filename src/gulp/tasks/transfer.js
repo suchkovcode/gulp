@@ -17,23 +17,48 @@ const fonts = () => {
 const js = () => {
    return $.gulp
       .src($.path.js.src)
+      .pipe($.app.sourcemaps.init()).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+       }))
       .pipe($.app.concat("script.js"))
+      .pipe($.app.babel())
       .pipe($.app.rename({ extname: ".min.js" }))
       .pipe($.app.size({ title: "Размер файла:" }))
+      .pipe($.app.sourcemaps.write("map/")).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+       }))
       .pipe($.gulp.dest($.path.js.dev));
 };
 const vendorCSS = () => {
    return $.gulp.src($.path.vendorCSS.src)
+   .pipe($.app.sourcemaps.init()).on("error", $.app.notify.onError({
+      message: "Error: <%= error.message %>",
+      title: "Error running something"
+    }))
       .pipe($.app.size({ title: "Размер файлов:" }))
       .pipe($.app.concat("vendor.css"))
       .pipe($.app.rename({ extname: ".min.css" }))
+      .pipe($.app.sourcemaps.write("map/")).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+       }))
       .pipe($.gulp.dest($.path.vendorCSS.dev));
 };
 const vendorJs = () => {
    return $.gulp.src($.path.vendorJs.src)
+   .pipe($.app.sourcemaps.init()).on("error", $.app.notify.onError({
+      message: "Error: <%= error.message %>",
+      title: "Error running something"
+    }))
       .pipe($.app.size({ title: "Размер файлов:" }))
       .pipe($.app.concat("vendor.js"))
       .pipe($.app.rename({ extname: ".min.js" }))
+      .pipe($.app.sourcemaps.write("map/")).on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+       }))
       .pipe($.gulp.dest($.path.vendorJs.dev));
 };
 const video = () => {
@@ -49,31 +74,6 @@ const webp = () => {
       .pipe($.gulp.dest($.path.webp.dev));
 };
 
-const favicon = () => {
-   return $.gulp.src($.path.favicon.src)
-   .pipe($.app.favicons({
-         appName: "My App",
-         appShortName: "App",
-         appDescription: "This is my application",
-         developerName: "Hayden Bleasel",
-         developerURL: "http://haydenbleasel.com/",
-         background: "#fff",
-         path: "/img/favicon/",
-         url: "http://haydenbleasel.com/",
-         display: "standalone",
-         orientation: "portrait",
-         scope: "/",
-         start_url: "/",
-         version: 1.0,
-         logging: false,
-         html: "index.html",
-         pipeHTML: true,
-         replace: true,
-      })
-   )
-   .pipe($.app.size({ title: "Размер файла:" }))
-   .pipe($.gulp.dest($.path.favicon.dev));
-};
 
 /* Экспортируем таски в модули */
 module.exports = {
@@ -85,5 +85,4 @@ module.exports = {
    video: video,
    webp: webp,
    admin: admin,
-   favicon: favicon,
 };
