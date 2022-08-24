@@ -23,6 +23,15 @@ const js = () => {
          output: {
             filename: "script.min.js",
          },
+         module: {
+            rules: [
+               {
+                  test: /\.js$/,
+                  exclude: "/node_modules/",
+                  loader: "babel-loader",
+               },
+            ],
+         },
       }))
       .pipe($.gulp.dest($.path.js.pub));
 };
