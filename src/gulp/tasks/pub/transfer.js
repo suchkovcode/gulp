@@ -17,21 +17,14 @@ const fonts = () => {
 const js = () => {
    return $.gulp
       .src($.path.js.src)
-      .pipe($.app.size({ title: "Размер до оптимизации:" }))
-      .pipe($.app.concat("script.js"))
-      .pipe($.app.babel())
-      .pipe($.app.jsmin())
-      .pipe($.app.rename({ extname: ".min.js" }))
-      .pipe($.app.size({ title: "Размер после оптимизации:" }))
+      .pipe($.compiler({
+         mode: "production",
+         cache: false,
+         output: {
+            filename: "script.min.js",
+         },
+      }))
       .pipe($.gulp.dest($.path.js.pub));
-};
-const vendorCSS = () => {
-   return $.gulp.src($.path.vendorCSS.src)
-      .pipe($.app.size({ title: "Размер файлов:" }))
-      .pipe($.app.concat("vendor.css"))
-      .pipe($.app.csso({ debug: false}))
-      .pipe($.app.rename({ extname: ".min.css" }))
-      .pipe($.gulp.dest($.path.vendorCSS.pub));
 };
 const vendorJs = () => {
    return $.gulp.src($.path.vendorJs.src)
@@ -40,6 +33,14 @@ const vendorJs = () => {
       .pipe($.app.concat("vendor.js"))
       .pipe($.app.rename({ extname: ".min.js" }))
       .pipe($.gulp.dest($.path.vendorJs.pub));
+};
+const vendorCSS = () => {
+   return $.gulp.src($.path.vendorCSS.src)
+      .pipe($.app.size({ title: "Размер файлов:" }))
+      .pipe($.app.concat("vendor.css"))
+      .pipe($.app.csso({ debug: false}))
+      .pipe($.app.rename({ extname: ".min.css" }))
+      .pipe($.gulp.dest($.path.vendorCSS.pub));
 };
 const video = () => {
    return $.gulp.src($.path.video.src)

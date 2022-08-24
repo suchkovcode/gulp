@@ -6,6 +6,7 @@ global.$ = {
    path:           require("./src/gulp/config/path"),
    task:           requireDir("./src/gulp/tasks/", { recurse: true }),
    browserSync:    require("browser-sync").create(),
+   compiler:       require("webpack-stream"),
 };
 
 
@@ -22,7 +23,7 @@ exports.default =
    $.task.dev.transfer.vendorCSS,
    $.task.dev.html,
    $.task.dev.styles,
-   $.task.dev.transfer.admin,);
+   $.task.dev.transfer.admin);
 
 
 /* Запускает сборку с запуском сервера */

@@ -23,7 +23,7 @@ const path = {
       watch: "./src/scss/**/*.{scss,sass}",
    },
    js: {
-      src: "./src/js/*.js",
+      src: "./src/js/script.js",
       dev: "./build/js/",
       pub: "./public/js/",
       watch: "./src/js/**/*",
