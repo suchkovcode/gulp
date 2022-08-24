@@ -67,10 +67,6 @@ const path = {
       pub: "./public/js/",
       watch: "./src/libs/**/*.js",
    },
-   sitemap: {
-      src: "./public/**/*.html",
-      pub: "./public/",
-   },
    zip: {
       src: "./public/**/*",
       pub: "./",

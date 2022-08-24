@@ -55,8 +55,7 @@ exports.pub =
    $.task.pub.htmlInclude,
    $.task.pub.html,
    $.task.pub.styles,
-   $.task.pub.transfer.admin,
-   $.task.pub.sitemap);
+   $.task.pub.transfer.admin);
 
 exports.zip = $.task.pub.zip;
 exports.server = $.task.pub.server;

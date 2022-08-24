@@ -91,7 +91,6 @@ gulp-file-include              # Подключает html компоненты 
 gulp-notify                    # Выводит подробные сообщения об ошибках в сборках dev и pub  
 gulp-rename                    # Переименовывает файлы в сборках dev и pub  
 gulp-shorthand                 # Групирует свойства css используя сокращения если это возможно в сборке pub  
-gulp-sitemap                   # Генерирует карту сайта в сборке pub  
 gulp-size                      # Выводит инофрмацию о размерах файлов в сборках dev и pub  
 gulp-sourcemaps                # Генерирует исходную карту стилей в сборке dev  
 gulp-webp                      # Конвертирует png в webp в сборках dev и pub  
