@@ -28,7 +28,7 @@ exports.default =
 
 /* Запускает сборку с запуском сервера */
 exports.dev =
-   $.gulp.dev.series(
+   $.gulp.series(
    $.task.dev.clean.build,
    $.task.dev.transfer.img,
    $.task.dev.transfer.webp,
@@ -60,3 +60,4 @@ exports.pub =
 
 exports.zip = $.task.pub.zip;
 exports.server = $.task.pub.server;
+exports.js = $.task.dev.transfer.js;
