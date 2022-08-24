@@ -63,7 +63,6 @@ const vendorJs = () => {
          $.compiler({
             mode: "production",
             cache: false,
-            devtool: "source-map",
             output: {
                filename: "vendor.min.js",
             },
