@@ -11,7 +11,11 @@ const cleanFonts = () => {
    .pipe($.app.clean());
 };
 const cleanJs = () => {
-   return $.gulp.src("build/js/*")
+   return $.gulp.src("build/js/script.min.js")
+   .pipe($.app.clean());
+};
+const cleanVendor = () => {
+   return $.gulp.src("build/js/vendor.min.js")
    .pipe($.app.clean());
 };
 const cleanVideo = () => {
@@ -30,5 +34,6 @@ module.exports = {
    webp: cleanWebp,
    fonts: cleanFonts,
    js: cleanJs,
+   vendor: cleanVendor,
    video: cleanVideo,
 };

@@ -16,12 +16,12 @@ const server = () => {
    $.gulp.watch($.path.html.watch.comp,       $.task.dev.html);
    $.gulp.watch($.path.html.watch.comp,       $.task.dev.htmlInclude);
    $.gulp.watch($.path.css.watch,             $.task.dev.styles);
-   $.gulp.watch($.path.img.watch,             $.gulp.series($.task.dev.clean.img, $.task.dev.transfer.img, $.task.dev.transfer.webp));
-   $.gulp.watch($.path.fonts.watch,           $.gulp.series($.task.dev.clean.fonts, $.task.dev.transfer.fonts));
-   $.gulp.watch($.path.video.watch,           $.gulp.series($.task.dev.clean.video, $.task.dev.transfer.video));
-   $.gulp.watch($.path.js.watch,              $.gulp.series($.task.dev.clean.js, $.task.dev.transfer.js, $.task.dev.transfer.vendorJs));
-   $.gulp.watch("./src/data/*.json",          $.gulp.series($.task.dev.html, $.task.dev.htmlInclude));
-   $.gulp.watch("./src/libs/**/*",            $.gulp.series($.task.dev.clean.js, $.task.dev.transfer.js, $.task.dev.transfer.vendorJs));
+   $.gulp.watch($.path.img.watch,             $.gulp.series($.task.dev.clean.img,     $.task.dev.transfer.img,     $.task.dev.transfer.webp));
+   $.gulp.watch($.path.fonts.watch,           $.gulp.series($.task.dev.clean.fonts,   $.task.dev.transfer.fonts));
+   $.gulp.watch($.path.video.watch,           $.gulp.series($.task.dev.clean.video,   $.task.dev.transfer.video));
+   $.gulp.watch($.path.js.watch,              $.gulp.series($.task.dev.clean.js,      $.task.dev.transfer.js));
+   $.gulp.watch($.path.vendorJs.watch,        $.gulp.series($.task.dev.clean.vendor,  $.task.dev.transfer.vendorJs));
+   $.gulp.watch("./src/data/*.json",          $.gulp.series($.task.dev.html,          $.task.dev.htmlInclude));
 };
 
 module.exports = server;

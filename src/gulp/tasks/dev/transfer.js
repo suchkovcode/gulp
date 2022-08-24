@@ -50,14 +50,18 @@ const vendorJs = () => {
    .on("error", $.app.notify.onError({
       message: "Error: <%= error.message %>",
       title: "Error running something"
-    }))
-   .pipe($.app.sourcemaps.init())
-      .pipe($.app.size({ title: "Размер файлов:" }))
-      .pipe($.app.concat("vendor.js"))
-      .pipe($.app.rename({ extname: ".min.js" }))
-      .pipe($.app.sourcemaps.write("/"))
+   }))
+   .pipe($.compiler({
+      mode: "development",
+      cache: true,
+      devtool: 'source-map',
+      output: {
+         filename: "vendor.min.js",
+      },
+   }))
       .pipe($.gulp.dest($.path.vendorJs.dev));
 };
+
 const video = () => {
    return $.gulp.src($.path.video.src)
    .pipe($.app.size({ title: "Размер файлов:" }))

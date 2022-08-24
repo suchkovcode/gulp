@@ -26,7 +26,7 @@ const path = {
       src: "./src/js/script.js",
       dev: "./build/js/",
       pub: "./public/js/",
-      watch: "./src/js/**/*",
+      watch: ["./src/js/**/*.js", "!./src/js/vendor.js" ]
    },
    img: {
       src: "./src/img/**/*",
@@ -56,10 +56,10 @@ const path = {
       watch: "./src/video/**/*",
    },
    vendorJs: {
-      src: ["./src/libs/**/*.js"],
+      src: "./src/js/vendor.js",
       dev: "./build/js/",
       pub: "./public/js/",
-      watch: "./src/libs/**/*.js",
+      watch: "./src/js/vendor.js",
    },
    zip: {
       src: "./public/**/*",
