@@ -12,34 +12,34 @@ global.$ = {
 /* Запускает сборку без запуска сервера */
 exports.default =
    $.gulp.series(
-   $.task.clean.build,
-   $.task.transfer.img,
-   $.task.transfer.webp,
-   $.task.transfer.video,
-   $.task.transfer.fonts,
-   $.task.transfer.js,
-   $.task.transfer.vendorJs,
-   $.task.transfer.vendorCSS,
-   $.task.html,
-   $.task.styles,
-   $.task.transfer.admin,);
+   $.task.dev.clean.build,
+   $.task.dev.transfer.img,
+   $.task.dev.transfer.webp,
+   $.task.dev.transfer.video,
+   $.task.dev.transfer.fonts,
+   $.task.dev.transfer.js,
+   $.task.dev.transfer.vendorJs,
+   $.task.dev.transfer.vendorCSS,
+   $.task.dev.html,
+   $.task.dev.styles,
+   $.task.dev.transfer.admin,);
 
 
 /* Запускает сборку с запуском сервера */
 exports.dev =
-   $.gulp.series(
-   $.task.clean.build,
-   $.task.transfer.img,
-   $.task.transfer.webp,
-   $.task.transfer.video,
-   $.task.transfer.fonts,
-   $.task.transfer.js,
-   $.task.transfer.vendorJs,
-   $.task.transfer.vendorCSS,
-   $.task.html,
-   $.task.styles,
-   $.task.transfer.admin,
-   $.task.server);
+   $.gulp.dev.series(
+   $.task.dev.clean.build,
+   $.task.dev.transfer.img,
+   $.task.dev.transfer.webp,
+   $.task.dev.transfer.video,
+   $.task.dev.transfer.fonts,
+   $.task.dev.transfer.js,
+   $.task.dev.transfer.vendorJs,
+   $.task.dev.transfer.vendorCSS,
+   $.task.dev.html,
+   $.task.dev.styles,
+   $.task.dev.transfer.admin,
+   $.task.dev.server);
 
 /* Запускает продвкшен сборку */
 exports.pub =

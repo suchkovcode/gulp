@@ -11,7 +11,7 @@ const cleanFonts = () => {
    .pipe($.app.clean());
 };
 const cleanJs = () => {
-   return $.gulp.src("build/js/")
+   return $.gulp.src("build/js/*")
    .pipe($.app.clean());
 };
 const cleanVideo = () => {
