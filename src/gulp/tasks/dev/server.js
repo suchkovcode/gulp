@@ -5,7 +5,7 @@ const server = () => {
       notify: false,
       watch: true,
       online: true,
-      open: "external",
+      open: "local",
       reloadDebounce: 1000,
       codeSync: true,
       https: false,
@@ -21,7 +21,7 @@ const server = () => {
    $.gulp.watch($.path.video.watch,           $.gulp.series($.task.dev.clean.video, $.task.dev.transfer.video));
    $.gulp.watch($.path.js.watch,              $.gulp.series($.task.dev.clean.js, $.task.dev.transfer.js, $.task.dev.transfer.vendorJs));
    $.gulp.watch("./src/data/*.json",          $.gulp.series($.task.dev.html, $.task.dev.htmlInclude));
-   $.gulp.watch("./src/libs/**/*",            $.gulp.series($.task.dev.clean.js, $.task.dev.transfer.js, $.task.dev.transfer.vendorJs, $.task.dev.transfer.vendorCSS));
+   $.gulp.watch("./src/libs/**/*",            $.gulp.series($.task.dev.clean.js, $.task.dev.transfer.js, $.task.dev.transfer.vendorJs));
 };
 
 module.exports = server;

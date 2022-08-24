@@ -20,7 +20,6 @@ exports.default =
    $.task.dev.transfer.fonts,
    $.task.dev.transfer.js,
    $.task.dev.transfer.vendorJs,
-   $.task.dev.transfer.vendorCSS,
    $.task.dev.html,
    $.task.dev.styles,
    $.task.dev.transfer.admin);
@@ -36,7 +35,6 @@ exports.dev =
    $.task.dev.transfer.fonts,
    $.task.dev.transfer.js,
    $.task.dev.transfer.vendorJs,
-   $.task.dev.transfer.vendorCSS,
    $.task.dev.html,
    $.task.dev.styles,
    $.task.dev.transfer.admin,
@@ -52,7 +50,6 @@ exports.pub =
    $.task.pub.transfer.fonts,
    $.task.pub.transfer.js,
    $.task.pub.transfer.vendorJs,
-   $.task.pub.transfer.vendorCSS,
    $.task.pub.htmlInclude,
    $.task.pub.html,
    $.task.pub.styles,
@@ -60,4 +57,3 @@ exports.pub =
 
 exports.zip = $.task.pub.zip;
 exports.server = $.task.pub.server;
-exports.js = $.task.dev.transfer.js;

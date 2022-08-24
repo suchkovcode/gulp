@@ -6,6 +6,10 @@ const admin = () => {
 const img = () => {
    return $.gulp
       .src($.path.img.src)
+      .on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+       }))
       .pipe($.app.size({ title: "Размер файлов:" }))
       .pipe($.gulp.dest($.path.img.dev));
 }
@@ -17,6 +21,10 @@ const fonts = () => {
 const js = () => {
    return $.gulp
       .src($.path.js.src)
+      .on("error", $.app.notify.onError({
+         message: "Error: <%= error.message %>",
+         title: "Error running something"
+       }))
       .pipe($.compiler({
          mode: "development",
          cache: true,
@@ -34,37 +42,21 @@ const js = () => {
             ],
          },
       }))
-      .pipe($.gulp.dest($.path.js.dev));
+      .pipe($.gulp.dest($.path.js.dev))
+      .pipe($.browserSync.stream());
 };
 const vendorJs = () => {
    return $.gulp.src($.path.vendorJs.src)
-   .pipe($.app.sourcemaps.init()).on("error", $.app.notify.onError({
+   .on("error", $.app.notify.onError({
       message: "Error: <%= error.message %>",
       title: "Error running something"
     }))
+   .pipe($.app.sourcemaps.init())
       .pipe($.app.size({ title: "Размер файлов:" }))
       .pipe($.app.concat("vendor.js"))
       .pipe($.app.rename({ extname: ".min.js" }))
-      .pipe($.app.sourcemaps.write("map/")).on("error", $.app.notify.onError({
-         message: "Error: <%= error.message %>",
-         title: "Error running something"
-       }))
+      .pipe($.app.sourcemaps.write("/"))
       .pipe($.gulp.dest($.path.vendorJs.dev));
-};
-const vendorCSS = () => {
-   return $.gulp.src($.path.vendorCSS.src)
-   .pipe($.app.sourcemaps.init()).on("error", $.app.notify.onError({
-      message: "Error: <%= error.message %>",
-      title: "Error running something"
-    }))
-      .pipe($.app.size({ title: "Размер файлов:" }))
-      .pipe($.app.concat("vendor.css"))
-      .pipe($.app.rename({ extname: ".min.css" }))
-      .pipe($.app.sourcemaps.write("map/")).on("error", $.app.notify.onError({
-         message: "Error: <%= error.message %>",
-         title: "Error running something"
-       }))
-      .pipe($.gulp.dest($.path.vendorCSS.dev));
 };
 const video = () => {
    return $.gulp.src($.path.video.src)
@@ -85,7 +77,6 @@ module.exports = {
    img: img,
    fonts: fonts,
    js: js,
-   vendorCSS: vendorCSS,
    vendorJs: vendorJs,
    video: video,
    webp: webp,
