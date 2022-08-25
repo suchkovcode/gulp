@@ -6,7 +6,7 @@ const server = () => {
       watch: true,
       online: true,
       open: "local",
-      reloadDebounce: 1000,
+      reloadDebounce: 2000,
       codeSync: true,
       https: false,
       ghostMode: false,
@@ -19,8 +19,8 @@ const server = () => {
    $.gulp.watch($.path.img.watch,             $.gulp.series($.task.dev.clean.img,     $.task.dev.transfer.img,     $.task.dev.transfer.webp));
    $.gulp.watch($.path.fonts.watch,           $.gulp.series($.task.dev.clean.fonts,   $.task.dev.transfer.fonts));
    $.gulp.watch($.path.video.watch,           $.gulp.series($.task.dev.clean.video,   $.task.dev.transfer.video));
-   $.gulp.watch($.path.js.watch,              $.gulp.series($.task.dev.clean.js,      $.task.dev.transfer.js));
-   $.gulp.watch($.path.vendorJs.watch,        $.gulp.series($.task.dev.clean.vendor,  $.task.dev.transfer.vendorJs));
+   $.gulp.watch($.path.js.watch,              $.task.dev.transfer.js);
+   $.gulp.watch($.path.vendorJs.watch,        $.task.dev.transfer.vendorJs);
    $.gulp.watch("./src/data/*.json",          $.gulp.series($.task.dev.html,          $.task.dev.htmlInclude));
 };
 
