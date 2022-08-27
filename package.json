@@ -6,7 +6,6 @@
       "start": "gulp dev",
       "build": "gulp",
       "public": "gulp pub",
-      "wp": "gulp wp",
       "zip": "gulp zip",
       "server": "gulp server"
    },
