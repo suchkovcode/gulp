@@ -52,6 +52,9 @@ const js = () => {
             },
          })
       )
+      .pipe($.app.eslint())
+      .pipe($.app.eslint.format())
+      .pipe($.app.eslint.failAfterError())
       .pipe($.gulp.dest($.path.js.dev));
 };
 const vendorJs = () => {
@@ -76,7 +79,6 @@ const vendorJs = () => {
       )
       .pipe($.gulp.dest($.path.vendorJs.dev));
 };
-
 const video = () => {
    return $.gulp
       .src($.path.video.src)
