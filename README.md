@@ -41,7 +41,7 @@
 ```
 ├── gulpfile.js                    # gulpfile сборщика  
 ├── .gitignore                     # gitignore сборщика  
-├── .eslintrc                      # eslintrc конфигурации(по умолчанию пустой)  
+├── .eslintrc.json                 # eslintrc конфигурации(по умолчанию пустой)  
 ├── .eslintignore                  # eslintignore сборщика  
 ├── package.json                   # Основные зависимости  
 ├── babel.config.json              # Базовые настройки конфигурации Babel 
@@ -76,7 +76,9 @@
       │   ├───components           # Стили компонентов  
       │   │   ├───header           # Стартовый файл для header(пустой)  
       │   │   └───footer           # Стартовый файл для footer(пустой)  
-      │   └───page                 # Стили страниц  
+      │   ├───page                 # Стили страниц  
+      │   ├───vendor.scss          # Стили для импортрования сторонних библиотек  
+      │   └───index.scss           # Стили проекта   
       └───video                    # Папака с видео   
 ```
   
