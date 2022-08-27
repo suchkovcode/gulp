@@ -99,35 +99,35 @@
 ## Подключенные плагины   
 > Используется последнии версии плагинов
 ```
-babel-cli                      # Babel для работы с командной строки  
-babel-core                     # Ядро Babel  
-babel-preset-env               # Популярный пресет для компиляции  
-babel-loader                   # Плагин webpack для использования babel в своих конфигах  
-eslint                         # Ядро линтера для проверки синтакиса  
-eslint-config-airbnb-base      # Плагин конфигурации проверки линтером  
-eslint-plugin-import           # Плагин для импортов дополнительных плагинов в линтер  
-gulp                           # Сам gulp для работы сборщика  
-gulp-eslint                    # Плагин для подержки ESlint в сценариях gulp 
-gulp-autoprefixer              # Добавляет автопрефикс в scss фацлы при компеляции в сборках dev и pub  
-gulp-clean                     # Удаляет директории при новой компеляции проекта в сборках dev и pub  
-gulp-csso                      # Минифицирует css файлы в сборке pub  
-gulp-purgecss                  # Удаляет неиспользованые стиили css в сборке pub(по умолчание закоментировано)  
-gulp-group-css-media-queries   # Групирует медиа запросы всех scss файлов в сборке pub  
-gulp-htmlmin                   # Минифицирует html страницы в сборке pub  
-gulp-imagemin                  # Минифицирует изобрадения в сборке pub  
-gulp-file-include              # Подключает html компоненты в сборках dev и pub  
-gulp-notify                    # Выводит подробные сообщения об ошибках в сборках dev и pub  
-gulp-rename                    # Переименовывает файлы в сборках dev и pub  
-gulp-shorthand                 # Групирует свойства css используя сокращения если это возможно в сборке pub  
-gulp-size                      # Выводит инофрмацию о размерах файлов в сборках dev и pub  
-gulp-sourcemaps                # Генерирует исходную карту стилей в сборке dev  
-gulp-webp                      # Конвертирует png в webp в сборках dev и pub  
-gulp-zip                       # Архифирует проект работает только для сборки pub  
-gulp-load-plugins              # Подключает все gulp плагины одной переменной в сборках dev и pub  
-require-dir                    # Подключает все таски одной переменной  в сборках dev и pub  
-gulp-sass                      # SASS препроцессор в сборках dev и pub  
-sass                           # SASS препроцессор в сборках dev и pub  
-webpack-stream                 # Плагин webpack для использования импортов js  
+babel-cli                     # Babel для работы с командной строки  
+babel-core                    # Ядро Babel  
+babel-preset-env              # Популярный пресет для компиляции  
+babel-loader                  # Плагин webpack для использования babel в своих конфигах  
+eslint                        # Ядро линтера для проверки синтакиса  
+eslint-config-airbnb-base     # Плагин конфигурации проверки линтером  
+eslint-plugin-import          # Плагин для импортов дополнительных плагинов в линтер  
+gulp                          # Сам gulp для работы сборщика  
+gulp-eslint                   # Плагин для подержки ESlint в сценариях gulp 
+gulp-autoprefixer             # Добавляет автопрефикс в scss фацлы при компеляции в сборках dev и pub  
+gulp-clean                    # Удаляет директории при новой компеляции проекта в сборках dev и pub  
+gulp-csso                     # Минифицирует css файлы в сборке pub  
+gulp-purgecss                 # Удаляет неиспользованые стиили css в сборке pub(закоментировано)  
+gulp-group-css-media-queries  # Групирует медиа запросы всех scss файлов в сборке pub  
+gulp-htmlmin                  # Минифицирует html страницы в сборке pub  
+gulp-imagemin                 # Минифицирует изобрадения в сборке pub  
+gulp-file-include             # Подключает html компоненты в сборках dev и pub  
+gulp-notify                   # Выводит подробные сообщения об ошибках в сборках dev и pub  
+gulp-rename                   # Переименовывает файлы в сборках dev и pub  
+gulp-shorthand                # Групирует свойства css используя сокращения если это возможно в сборке pub  
+gulp-size                     # Выводит инофрмацию о размерах файлов в сборках dev и pub  
+gulp-sourcemaps               # Генерирует исходную карту стилей в сборке dev  
+gulp-webp                     # Конвертирует png в webp в сборках dev и pub  
+gulp-zip                      # Архифирует проект работает только для сборки pub  
+gulp-load-plugins             # Подключает все gulp плагины одной переменной в сборках dev и pub  
+require-dir                   # Подключает все таски одной переменной  в сборках dev и pub  
+gulp-sass                     # SASS препроцессор в сборках dev и pub  
+sass                          # SASS препроцессор в сборках dev и pub  
+webpack-stream                # Плагин webpack для использования импортов js  
 
 ```
 
