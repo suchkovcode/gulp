@@ -47,9 +47,6 @@ const js = () => {
             },
          })
       )
-      .pipe($.app.eslint())
-      .pipe($.app.eslint.format())
-      .pipe($.app.eslint.failAfterError())
       .pipe($.gulp.dest($.path.js.pub));
 };
 const vendorJs = () => {

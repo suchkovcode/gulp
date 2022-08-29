@@ -57,3 +57,4 @@ exports.pub =
 
 exports.zip = $.task.pub.zip;
 exports.server = $.task.pub.server;
+exports.test = $.task.dev.test;
