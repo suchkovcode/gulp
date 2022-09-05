@@ -9,7 +9,8 @@
          "wp": "gulp wp",
          "zip": "gulp zip",
          "server": "gulp server",
-         "test": "gulp test"
+         "test": "gulp test",
+         "check": "npx prettier --check ."
       },
       "browserslist": [
          "last 1 versions"
@@ -46,8 +47,8 @@
          "gulp-webp": "^4.0.1",
          "gulp-zip": "^5.1.0",
          "imports-loader": "^4.0.1",
-         "prettier": "^2.7.1",
          "require-dir": "^1.2.0",
+         "prettier": "^2.7.1",
          "sass": "^1.54.5",
          "webpack-stream": "^7.0.0"
       }
