@@ -6,13 +6,13 @@ const html = () => {
          $.app.notify.onError({
             message: "Error: <%= error.message %>",
             title: "Error running something",
-         })
+         }),
       )
       .pipe(
          $.app.fileInclude({
             prefix: "@",
             basepath: "./src/",
-         })
+         }),
       )
       .pipe($.app.size({ title: "Размер до сжатия:" }))
       .pipe($.app.htmlmin({ collapseWhitespace: true, removeComments: true }))
