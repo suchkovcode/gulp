@@ -48,6 +48,7 @@
 ├── .eslintignore                  # eslintignore сборщика
 ├── .prettierrc.json               # Файл конфигурации форматера кода prettier
 ├── .prettierignore                # Файл игнорирования директорий и файлов для prettier
+├── .htmlhintrc.json               # Файл конфигураций плагина HTMLhint
 ├── package.json                   # Основные зависимости
 ├── babel.config.json              # Базовые настройки конфигурации Babel
 └── src                            # Исходная папка проекта
