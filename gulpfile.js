@@ -55,4 +55,4 @@ exports.pub = $.gulp.series(
 
 exports.zip = $.task.pub.zip;
 exports.server = $.task.pub.server;
-exports.test = $.task.dev.test;
+exports.test = $.gulp.series($.task.rev.htmlhint, $.task.rev.eslint);

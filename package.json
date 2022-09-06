@@ -6,12 +6,11 @@
       "start": "gulp dev",
       "build": "gulp",
       "public": "gulp pub",
-      "wp": "gulp wp",
       "zip": "gulp zip",
       "server": "gulp server",
       "test": "gulp test",
       "check": "prettier --check src/**/*",
-      "lint": " npx eslint src/**/*.js",
+      "lint": "npx eslint src/**/*.js",
       "format": "prettier --write ."
    },
    "browserslist": [
@@ -37,6 +36,7 @@
       "gulp-eslint": "^6.0.0",
       "gulp-file-include": "^2.3.0",
       "gulp-group-css-media-queries": "^1.2.2",
+      "gulp-htmlhint": "^4.0.2",
       "gulp-htmlmin": "^5.0.1",
       "gulp-imagemin": "^7.1.0",
       "gulp-load-plugins": "^2.0.7",
