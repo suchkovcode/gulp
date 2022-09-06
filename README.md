@@ -43,9 +43,11 @@
 
 ```
 ├── gulpfile.js                    # gulpfile сборщика
-├── .gitignore                     # gitignore сборщика
+├── .gitignore                     # gitignore сборщика 
 ├── .eslintrc.json                 # eslintrc конфигурации(по умолчанию пустой)
 ├── .eslintignore                  # eslintignore сборщика
+├── .prettierrc.json               # Файл конфигурации форматера кода prettier
+├── .prettierignore                # Файл игнорирования директорий и файлов для prettier
 ├── package.json                   # Основные зависимости
 ├── babel.config.json              # Базовые настройки конфигурации Babel
 └── src                            # Исходная папка проекта
