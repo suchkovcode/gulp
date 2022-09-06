@@ -5,7 +5,6 @@ const eslint = () => {
       .pipe($.app.eslint.format())
       .pipe(
          $.app.eslint.results((results) => {
-            console.log(`ESLint result: ${result.filePath}`);
             console.log(`Total Results: ${results.length}`);
             console.log(`Total Warnings: ${results.warningCount}`);
             console.log(`Total Errors: ${results.errorCount}`);

@@ -12,7 +12,7 @@
       "ecmaVersion": 2016,
       "sourceType": "module"
    },
-   
+
    "rules": {
       "no-undef": "off",
       "semi": "error",
