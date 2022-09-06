@@ -14,7 +14,7 @@
    },
    "rules": {
       "prettier/prettier": "error",
-      "typeof": false,
+      "no-undef": "off",
       "semi": "error",
       "no-console": "error",
       "no-debugger": "error",
@@ -22,7 +22,7 @@
       "no-var": "error",
       "eol-last": "off",
       "arrow-body-style": ["error", "as-needed"],
-      "comma-dangle": "error",
+      "comma-dangle": "off",
       "no-param-reassign": "off",
       "constructor-super": "error",
       "no-unused-expressions": "error",

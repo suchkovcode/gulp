@@ -3,4 +3,5 @@ gulp/
 .prettierignore
 .prettierrc.json
 .vscode
-*.js.map
+.js.map
+.gitkeep
