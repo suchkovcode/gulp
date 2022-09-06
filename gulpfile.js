@@ -20,7 +20,7 @@ exports.default = $.gulp.series(
    $.task.dev.transfer.vendorJs,
    $.task.dev.html,
    $.task.dev.styles,
-   $.task.dev.transfer.admin,
+   $.task.dev.transfer.admin
 );
 
 /* Запускает сборку с запуском сервера */
@@ -35,7 +35,7 @@ exports.dev = $.gulp.series(
    $.task.dev.html,
    $.task.dev.styles,
    $.task.dev.transfer.admin,
-   $.task.dev.server,
+   $.task.dev.server
 );
 
 /* Запускает продвкшен сборку */
@@ -50,7 +50,7 @@ exports.pub = $.gulp.series(
    $.task.pub.htmlInclude,
    $.task.pub.html,
    $.task.pub.styles,
-   $.task.pub.transfer.admin,
+   $.task.pub.transfer.admin
 );
 
 exports.zip = $.task.pub.zip;
