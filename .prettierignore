@@ -1,7 +1,6 @@
 build/
 dist/
 public/
-gulp/
 img/
 fonts/
 package-lock.json
