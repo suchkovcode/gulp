@@ -1,6 +1,7 @@
 build/
 dist/
 public/
+gulp/
 package-lock.json
 **/.git
 **/.svn
@@ -8,3 +9,4 @@ package-lock.json
 **/node_modules
 .gitignore
 .eslintignore
+.gitkeep
