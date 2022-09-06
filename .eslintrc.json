@@ -18,21 +18,40 @@
       "no-console": "error",
       "no-debugger": "error",
       "no-plusplus": "off",
+      "no-var": "error",
       "eol-last": "off",
-      "max-len": ["error", 120, { "ignoreUrls": true }],
-      "quotes": ["error", "double"],
-      "indent": ["error", 3],
       "arrow-body-style": ["error", "as-needed"],
       "comma-dangle": "error",
       "no-param-reassign": "off",
       "constructor-super": "error",
       "no-unused-expressions": "error",
-      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "no-this-before-super": "error",
+      "no-dupe-keys": "error",
+      "no-dupe-else-if": "error",
+      "max-len": ["error", 120, { "ignoreUrls": true }],
+      "quotes": ["error", "double"],
+      "indent": ["error", 3],
+      "no-duplicate-imports": ["error", { "includeExports": true }],
+      "no-unused-vars": [
+         "error",
+         {
+            "vars": "local",
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+         }
+      ],
       "prefer-destructuring": [
          "error",
          {
             "array": true,
             "object": true
+         }
+      ],
+      "prefer-const": [
+         "error",
+         {
+            "destructuring": "any",
+            "ignoreReadBeforeAssign": true
          }
       ]
    }
