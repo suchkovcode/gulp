@@ -9,7 +9,7 @@
    "attr-no-unnecessary-whitespace": true,
    "attr-unsafe-chars": true,
    "attr-value-double-quotes": true,
-   "attr-value-not-empty": false,
+   "attr-value-not-empty": true,
    "attr-sorted": false,
    "attr-whitespace": true,
    "alt-require": true,
@@ -24,6 +24,7 @@
    "id-class-value": false,
    "id-unique": true,
    "inline-script-disabled": true,
-   "inline-style-disabled": false,
+   "inline-style-disabled": true,
+   "spec-char-escape": false,
    "space-tab-mixed-disabled": "space"
 }
