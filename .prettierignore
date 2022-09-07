@@ -1,13 +1,15 @@
+admin/
 build/
 dist/
 public/
+video/
 img/
 fonts/
+node_modules/
 package-lock.json
 **/.git
 **/.svn
 **/.hg
-**/node_modules
 .gitignore
 .eslintignore
 .gitkeep
