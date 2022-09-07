@@ -9,9 +9,8 @@
       "zip": "gulp zip",
       "server": "gulp server",
       "test": "gulp test",
-      "check": "prettier --check src/**/*",
-      "lint": "npx eslint src/**/*.js",
-      "format": "prettier --write ."
+      "check": "prettier --check src/**/* && eslint && stylelint src/scss/**/*.scss",
+      "fix": "prettier --write . && eslint --fix && stylelint src/scss/**/*.scss --fix"
    },
    "browserslist": [
       "last 1 versions"
@@ -53,6 +52,10 @@
       "prettier": "^2.7.1",
       "require-dir": "^1.2.0",
       "sass": "^1.54.8",
+      "stylelint": "^14.11.0",
+      "stylelint-config-prettier-scss": "^0.0.1",
+      "stylelint-config-standard-scss": "^5.0.0",
+      "stylelint-order": "^5.0.0",
       "webpack-stream": "^7.0.0"
    }
 }
