@@ -6,7 +6,7 @@ const img = () => {
          $.app.notify.onError({
             message: "Error: <%= error.message %>",
             title: "Error running something",
-         }),
+         })
       )
       .pipe($.app.size({ title: "Размер до сжатия:" }))
       .pipe($.app.imagemin({ verbose: true }))
@@ -27,7 +27,7 @@ const js = () => {
          $.app.notify.onError({
             message: "Error: <%= error.message %>",
             title: "Error running something",
-         }),
+         })
       )
       .pipe(
          $.compiler({
@@ -45,7 +45,7 @@ const js = () => {
                   },
                ],
             },
-         }),
+         })
       )
       .pipe($.gulp.dest($.path.js.pub));
 };
@@ -57,7 +57,7 @@ const vendorJs = () => {
          $.app.notify.onError({
             message: "Error: <%= error.message %>",
             title: "Error running something",
-         }),
+         })
       )
       .pipe(
          $.compiler({
@@ -66,7 +66,7 @@ const vendorJs = () => {
             output: {
                filename: "vendor.min.js",
             },
-         }),
+         })
       )
       .pipe($.gulp.dest($.path.vendorJs.pub));
 };

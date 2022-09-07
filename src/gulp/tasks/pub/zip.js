@@ -6,7 +6,7 @@ const zip = () => {
          $.app.notify.onError({
             message: "Error: <%= error.message %>",
             title: "Error running something",
-         }),
+         })
       )
       .pipe($.app.size({ title: "Размер до архивации:" }))
       .pipe($.app.zip("public.zip"))

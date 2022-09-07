@@ -16,7 +16,10 @@ const server = () => {
    $.gulp.watch($.path.html.watch.comp, $.task.dev.html);
    $.gulp.watch($.path.html.watch.comp, $.task.dev.htmlInclude);
    $.gulp.watch($.path.css.watch, $.task.dev.styles);
-   $.gulp.watch($.path.img.watch, $.gulp.series($.task.dev.clean.img, $.task.dev.transfer.img, $.task.dev.transfer.webp));
+   $.gulp.watch(
+      $.path.img.watch,
+      $.gulp.series($.task.dev.clean.img, $.task.dev.transfer.img, $.task.dev.transfer.webp)
+   );
    $.gulp.watch($.path.fonts.watch, $.gulp.series($.task.dev.clean.fonts, $.task.dev.transfer.fonts));
    $.gulp.watch($.path.video.watch, $.gulp.series($.task.dev.clean.video, $.task.dev.transfer.video));
    $.gulp.watch($.path.js.watch, $.task.dev.transfer.js);

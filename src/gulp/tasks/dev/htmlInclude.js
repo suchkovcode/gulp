@@ -6,13 +6,13 @@ const htmlInclude = () => {
          $.app.notify.onError({
             message: "Error: <%= error.message %>",
             title: "Error running something",
-         }),
+         })
       )
       .pipe(
          $.app.fileInclude({
             prefix: "@",
             basepath: "./src/",
-         }),
+         })
       )
       .pipe($.browserSync.stream());
 };
