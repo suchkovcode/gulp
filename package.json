@@ -2,6 +2,13 @@
    "name": "example",
    "version": "1.0.0",
    "description": "example",
+   "keywords": [],
+   "author": "Nikita Suchkov",
+   "license": "MIT",
+   "private": true,
+   "browserslist": [
+      "last 1 versions"
+   ],
    "scripts": {
       "start": "gulp dev",
       "build": "gulp",
@@ -12,12 +19,6 @@
       "check": "prettier --check src/**/* && eslint && stylelint src/scss/**/*.scss",
       "fix": "prettier --write . && eslint --fix && stylelint src/scss/**/*.scss --fix"
    },
-   "browserslist": [
-      "last 1 versions"
-   ],
-   "keywords": [],
-   "author": "Nikita Suchkov",
-   "license": "MIT",
    "devDependencies": {
       "@babel/cli": "^7.18.10",
       "@babel/core": "^7.19.0",
