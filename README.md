@@ -96,34 +96,28 @@
 
 `npm start` - запускает сборку проекта в режиме разработки в папку **build**, с запуском сервера и вотчера проекта.
 
-`npm run build` - запускает просто сборку в папку **build**, без запуска сервера и вотчера.
+`npm run build:dev` - запускает просто сборку в папку **build**, без запуска сервера и вотчера.
 
-`npm run public` - запускает сборку продакшен проекта в папку **public**, с минификацией файлов и изображений, а также добавление sitemap и удалением sourcemap.
+`npm run build:prod` - запускает сборку продакшен проекта в папку **public**, с минификацией файлов и изображений, а также добавление sitemap и удалением sourcemap.
 
-`npm run zip` - запускает архиватор для для продакшен версии папки **public**
-
-`npm run server` - запускает сервер без вотчера для продакшен версии папки **public**
+`npm run build:zip` - запускает архиватор для для продакшен версии папки **public**
 
 `npm run test` - запускает проверку исходного кода через HTMLhint и ESlin для в папке **src**
 
-`npm run check` - запускает проверку исходного кода на ошибки через Prettier, ESlin и Stylelint для в папке **src**
+`npm run test:check` - запускает проверку исходного кода на ошибки через Prettier, ESlin и Stylelint для в папке **src**
 
-`npm run fix` - запускает исправление исходного кода на ошибки через Prettier, ESlin и Stylelint для в папке **src**
+`npm run test:fix` - запускает исправление исходного кода на ошибки через Prettier, ESlin и Stylelint для в папке **src**
+
+`npm run server` - запускает сервер без вотчера для продакшен версии папки **public**
 
 ## Подключенные плагины
 
 > Используется последнии версии плагинов
 
 ```
-babel-cli                     # Babel для работы с командной строки
-babel-core                    # Ядро Babel
-babel-preset-env              # Популярный пресет для компиляции
+webpack-stream                # Плагин webpack для использования импортов js
 babel-loader                  # Плагин webpack для использования babel в своих конфигах
-eslint                        # Ядро линтера для проверки синтакиса
-eslint-plugin-import          # Плагин для импортов дополнительных плагинов в линтер
-eslint-config-prettier        # Плагин конфигурации prettier для eslinta
-eslint-plugin-prettier        # Плагин для интеграции prettier и eslint
-prettier                      # Плагин для форматирования кода в единый стиль
+
 gulp                          # Сам gulp для работы сборщика
 gulp-eslint                   # Плагин для подержки ESlint в сценариях gulp
 gulp-autoprefixer             # Добавляет автопрефикс в scss фацлы при компеляции в сборках dev и pub
@@ -143,14 +137,26 @@ gulp-sourcemaps               # Генерирует исходную карту
 gulp-webp                     # Конвертирует png в webp в сборках dev и pub
 gulp-zip                      # Архифирует проект работает только для сборки pub
 gulp-load-plugins             # Подключает все gulp плагины одной переменной в сборках dev и pub
-require-dir                   # Подключает все таски одной переменной  в сборках dev и pub
 gulp-sass                     # SASS препроцессор в сборках dev и pub
-sass                          # SASS препроцессор в сборках dev и pub
-webpack-stream                # Плагин webpack для использования импортов js
+
+babel-cli                     # Babel для работы с командной строки
+babel-core                    # Ядро Babel
+babel-preset-env              # Популярный пресет для компиляции
+
+eslint                        # Ядро линтера для проверки синтакиса
+eslint-plugin-import          # Плагин для импортов дополнительных плагинов в линтер
+eslint-config-prettier        # Плагин конфигурации prettier для eslinta
+eslint-plugin-prettier        # Плагин для интеграции prettier и eslint
+
 stylelint                     # Плагин для контроля качества стилей
 stylelint-config-prettier-scss# Плагин для совместной работы prettier и stylelint
 stylelint-config-standard-scss# Плагин конфигурации для scss синтаксиса
 stylelint-order               # Плагин для настройка сортировки свойств и элементов
+
+prettier                      # Плагин для форматирования кода в единый стиль
+browser-sync                  # Плагин для содания сервера разработки
+require-dir                   # Подключает все таски одной переменной  в сборках dev и pub
+sass                          # SASS препроцессор в сборках dev и pub
 ```
 
 ## Сторонние библиотеки
