@@ -2,7 +2,6 @@
    "name": "example",
    "version": "1.0.0",
    "description": "example",
-<<<<<<< HEAD
    "author": "Nikita Suchkov",
    "license": "MIT",
    "browserslist": "> 0.5%, last 3 versions, not dead",
@@ -18,24 +17,6 @@
       "test:check": "prettier --check src/**/* && eslint && stylelint src/**/*.scss",
       "test:fix": "prettier --write . && eslint --fix && stylelint src/**/*.scss --fix",
       "server": "gulp server"
-=======
-   "keywords": [],
-   "author": "Nikita Suchkov",
-   "license": "MIT",
-   "private": true,
-   "browserslist": [
-      "last 1 versions"
-   ],
-   "scripts": {
-      "start": "gulp dev",
-      "build": "gulp",
-      "public": "gulp pub",
-      "zip": "gulp zip",
-      "server": "gulp server",
-      "test": "gulp test",
-      "check": "prettier --check src/**/* && eslint && stylelint src/scss/**/*.scss",
-      "fix": "prettier --write . && eslint --fix && stylelint src/scss/**/*.scss --fix"
->>>>>>> 9cf3504472f3e18d662efe817eb50fb08ce53b43
    },
    "devDependencies": {
       "webpack-stream": "^7.0.0",
