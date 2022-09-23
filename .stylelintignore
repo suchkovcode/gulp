@@ -1,4 +1,8 @@
+admin/
 dist/
-biuld/
+build/
 public/
+video/
 mode_modules/
+/.vscode
+/.git
