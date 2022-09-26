@@ -1,8 +1,20 @@
+## Folder
 admin/
-dist/
 build/
+dist/
 public/
 video/
-mode_modules/
-/.vscode
-/.git
+img/
+fonts/
+node_modules/
+
+## System files
+.vscode
+.cache
+.git
+.svn
+.hg
+
+## Config files
+webpack.config.js
+package-lock.json
