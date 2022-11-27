@@ -6,6 +6,7 @@ public/
 video/
 img/
 fonts/
+gulp/
 node_modules/
 
 ## System files
