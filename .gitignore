@@ -3,9 +3,6 @@ admin/
 build/
 dist/
 public/
-video/
-img/
-fonts/
 node_modules/
 
 ## System files
@@ -14,6 +11,7 @@ node_modules/
 .git
 .svn
 .hg
+.idea
 
 ## Config files
 package-lock.json
