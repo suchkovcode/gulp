@@ -18,10 +18,16 @@
       "test:fix": "prettier --write . && eslint --fix && stylelint src/**/*.scss --fix",
       "server": "gulp server"
    },
+   "lint-staged": {
+      "*.js": ["prettier --write", "eslint --fix --color"],
+      "*.scss": "stylelint --syntax=scss --fix"
+   },
    "devDependencies": {
       "webpack-stream": "^7.0.0",
       "imports-loader": "^4.0.1",
       "babel-loader": "^8.2.5",
+      "husky": "^8.0.2",
+      "lint-staged": "^13.0.4",
 
       "gulp": "^4.0.2",
       "gulp-autoprefixer": "^8.0.0",
