@@ -1,3 +1,4 @@
+// @ts-nocheck
 const requireDir = require("require-dir");
 global.$ = {
    gulp: require("gulp"),
@@ -17,7 +18,6 @@ exports.default = $.gulp.series(
    $.task.dev.transfer.video,
    $.task.dev.transfer.fonts,
    $.task.dev.transfer.js,
-   $.task.dev.transfer.vendorJs,
    $.task.dev.html,
    $.task.dev.styles,
    $.task.dev.transfer.admin
@@ -31,7 +31,6 @@ exports.dev = $.gulp.series(
    $.task.dev.transfer.video,
    $.task.dev.transfer.fonts,
    $.task.dev.transfer.js,
-   $.task.dev.transfer.vendorJs,
    $.task.dev.html,
    $.task.dev.styles,
    $.task.dev.transfer.admin,
@@ -46,7 +45,6 @@ exports.pub = $.gulp.series(
    $.task.pub.transfer.video,
    $.task.pub.transfer.fonts,
    $.task.pub.transfer.js,
-   $.task.pub.transfer.vendorJs,
    $.task.pub.htmlInclude,
    $.task.pub.html,
    $.task.pub.styles,

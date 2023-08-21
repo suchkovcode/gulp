@@ -1,3 +1,4 @@
+// @ts-nocheck
 const admin = () => {
    return $.gulp
       .src($.path.admin.src)
@@ -54,28 +55,6 @@ const js = () => {
       )
       .pipe($.gulp.dest($.path.js.dev));
 };
-const vendorJs = () => {
-   return $.gulp
-      .src($.path.vendorJs.src)
-      .on(
-         "error",
-         $.app.notify.onError({
-            message: "Error: <%= error.message %>",
-            title: "Error running something",
-         })
-      )
-      .pipe(
-         $.compiler({
-            mode: "production",
-            cache: true,
-            devtool: "source-map",
-            output: {
-               filename: "vendor.min.js",
-            },
-         })
-      )
-      .pipe($.gulp.dest($.path.vendorJs.dev));
-};
 const video = () => {
    return $.gulp
       .src($.path.video.src)
@@ -96,7 +75,6 @@ module.exports = {
    img: img,
    fonts: fonts,
    js: js,
-   vendorJs: vendorJs,
    video: video,
    webp: webp,
    admin: admin,

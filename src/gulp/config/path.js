@@ -55,12 +55,6 @@ const path = {
       pub: "./public/video/",
       watch: "./src/video/**/*",
    },
-   vendorJs: {
-      src: "./src/js/vendor.js",
-      dev: "./build/js/",
-      pub: "./public/js/",
-      watch: "./src/js/vendor.js",
-   },
    zip: {
       src: "./public/**/*",
       pub: "./",
