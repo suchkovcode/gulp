@@ -1,7 +1,7 @@
 {
-   "name": "example",
+   "name": "gulp",
    "version": "1.0.0",
-   "description": "example",
+   "description": "Gulp starter template",
    "author": "Nikita Suchkov",
    "license": "MIT",
    "browserslist": "> 0.5%, last 3 versions, not dead",
